@@ -1,67 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Asheesh | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
-<body>
-  <!-- Header Section -->
-  <header>
-    <nav>
-      <h1 class="logo">Asheesh743</h1>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white min-h-screen">
+
+  <!-- Navbar -->
+  <header class="sticky top-0 bg-black bg-opacity-50 shadow-lg z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold tracking-wide">Asheesh743</h1>
+      <ul class="flex gap-6">
+        <li><a href="#about" class="hover:text-yellow-300 transition">About</a></li>
+        <li><a href="#projects" class="hover:text-yellow-300 transition">Projects</a></li>
+        <li><a href="#contact" class="hover:text-yellow-300 transition">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h2>Hi, I'm <span>Asheesh</span></h2>
-    <p>A Web Developer passionate about building modern websites and apps.</p>
-    <a href="#projects" class="btn">View My Work</a>
+  <!-- Hero -->
+  <section class="h-[90vh] flex flex-col justify-center items-center text-center">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="text-yellow-300">Asheesh</span></h2>
+    <p class="text-lg md:text-2xl mb-6">
+      <span id="typed"></span>
+    </p>
+    <a href="#projects" class="px-6 py-3 bg-yellow-300 text-black rounded-full shadow-lg hover:scale-105 transform transition">View My Work</a>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a web developer with experience in HTML, CSS, JavaScript, and PHP/Laravel. I love creating interactive and responsive websites.</p>
+  <!-- About -->
+  <section id="about" class="py-16 bg-black bg-opacity-60">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">About Me</h2>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        Motivated and versatile professional with hands-on experience in Web Development. 
+        Skilled in PHP, Laravel, CodeIgniter, HTML, CSS, JavaScript, Bootstrap, and MySQL.  
+        Experienced in building responsive and user-friendly websites with strong technical and client-facing skills.
+      </p>
+    </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-list">
-      <div class="project-card">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio website showcasing my skills and work.</p>
-      </div>
-      <div class="project-card">
-        <h3>Student Management System</h3>
-        <p>A CRUD application with PHP, AJAX, and MySQL for managing student records.</p>
-      </div>
-      <div class="project-card">
-        <h3>SadiBooking</h3>
-        <p>A booking website for cars, buses, and emergency vehicles with map functionality.</p>
+  <!-- Projects -->
+  <section id="projects" class="py-16">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Project Card -->
+        <div class="bg-black bg-opacity-50 rounded-xl p-6 shadow-lg hover:scale-105 transition">
+          <h3 class="text-xl font-semibold mb-2">BookMyHairSalon</h3>
+          <p class="mb-4">An online salon booking system with Razorpay payment, admin panel, and appointment tracking.</p>
+          <a href="https://bookmyhairsalon.com" target="_blank" class="text-yellow-300 underline">View Live</a>
+        </div>
+
+       
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:softvertax@gmail.com">softvertax@gmail.com</a></p>
-    <p>Phone: +917683022743</p>
-    <p>GitHub: <a href="https://github.com/Asheesh743" target="_blank">Asheesh743</a></p>
+  <!-- Contact -->
+  <section id="contact" class="py-16 bg-black bg-opacity-70">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Contact Me</h2>
+      <p>Email: <a href="mailto:softvertax@gmail.com" class="text-yellow-300 underline">softvertax@gmail.com</a></p>
+      <p>Phone: <span class="text-yellow-300">+91 7683022743</span></p>
+      <p>GitHub: <a href="https://github.com/Asheesh743" target="_blank" class="text-yellow-300 underline">Asheesh743</a></p>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer class="bg-black py-6 text-center">
     <p>© 2025 Asheesh743 | All Rights Reserved</p>
   </footer>
+
+  <script>
+    var typed = new Typed('#typed', {
+      strings: [
+        "A Web Developer passionate about building modern websites.",
+        "Skilled in PHP, Laravel, CodeIgniter & JavaScript.",
+        "Turning ideas into functional digital solutions."
+      ],
+      typeSpeed: 50,
+      backSpeed: 25,
+      loop: true
+    });
+  </script>
 </body>
 </html>
